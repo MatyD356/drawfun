@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sketch</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="new-grid">
+        <p class="grid-size">Grid size</p>
+        <input value="16" id="size" type="text" class="input" />
+        <button class="btn newGrid">New Grid</button>
+      </div>
+      <div class="paint-style">
+        <button class="hover btn active">Hover</button>
+        <button class="click btn">Click</button>
+        <button class="eraser btn">Eraser</button>
+      </div>
+      <div class="color-options">
+        <button id="grayscale" class="btn activeState">Garyscale</button>
+        <input id="colorPicker" type="color" class="color-picker" value="#511845" />
+        <button id="randomColor" class="btn">Random Color</button>
+      </div>
+    </nav>
+    <div class="back">
+      <div class="container"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

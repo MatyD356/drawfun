@@ -1,0 +1,122 @@
+:root {
+  --columns: 16;
+  --rows: 16;
+  --active-color: #511845;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu {
+  width: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.new-grid,
+.paint-style,
+.color-options {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  vertical-align: middle;
+}
+.border {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.back {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95vh;
+  background-color: #c70039;
+  border: 1px solid #511845;
+}
+.container {
+  height: 75vh;
+  width: 75vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.btn,
+.input,
+.color-picker {
+  text-align: center;
+  color: #511845;
+  width: 50%;
+  font-size: 2rem;
+  border: none;
+  padding: 2% 4%;
+  font-weight: 900;
+  border: 1px solid #511845;
+}
+.color-picker {
+  cursor: pointer;
+  height: 100%;
+  background-color: #c70039;
+}
+.btn {
+  background-color: #c70039;
+  color: white;
+}
+.btn:hover,
+.color-picker:hover,
+.activeState,
+.active {
+  transition-duration: 400ms;
+  background-color: #ff5733;
+  color: #511845;
+}
+
+.btn:active {
+  background-color: #511845;
+  color: white;
+}
+.newGrid {
+  flex: 1;
+}
+.grid-size {
+  background-color: #c70039;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 0.5% 5%;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 450px) {
+  :root {
+    font-size: 8px;
+  }
+  .menu {
+    width: 100vw;
+  }
+  .back {
+    width: 100vw;
+    height: 85vh;
+  }
+  .container {
+    margin-top: 5%;
+    align-self: flex-start;
+    width: 90vw;
+    height: 50vh;
+  }
+}
